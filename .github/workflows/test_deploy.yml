@@ -30,8 +30,8 @@ jobs:
       - name: Cache yarn
         uses: actions/cache@v2
         with:
-        path: node_modules
-        key: yarn-1-${{ hashFiles('yarn.lock') }}
+          path: node_modules
+          key: yarn-1-${{ hashFiles('yarn.lock') }}
 
       - run: RAILS_ENV=test bundle exec rails assets:precompile
 
